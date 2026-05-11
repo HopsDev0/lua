@@ -137,7 +137,7 @@ local ReplaySequence = {
     {delay = 1, action = "upgrade", customID = 6},
     {delay = 1, action = "upgrade", customID = 6},
 
-    {delay = 25, action = "replay"},
+    {delay = 15, action = "replay"},
 }
 
 -- ═══════════════════════════════════════════════════════════
