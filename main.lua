@@ -35,7 +35,7 @@ end
 -- ═══════════════════════════════════════════════════════════
 
 local ReplaySequence = {
-    {delay = 15, action = "ready"},
+    {delay = 10, action = "ready"},
     {delay = 2.957, action = "gamemode", value = "Extreme"},
     {delay = 0.990, action = "speed", value = 3},
 
