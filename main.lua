@@ -10,20 +10,23 @@
 -- ═══════════════════════════════════════════════════════════
 
 if not _G.TDAutoFarmScript then
-    _G.TDAutoFarmScript = game:HttpGet(getgenv().ScriptURL or "")
+    local success, code = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/HopsDev0/lua/refs/heads/main/main.lua")
+    end)
+    
+    if success and code then
+        _G.TDAutoFarmScript = code
+    end
 end
 
 local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 
-if queueonteleport then
+if queueonteleport and _G.TDAutoFarmScript then
     queueonteleport([[
         repeat task.wait() until game:IsLoaded()
         task.wait(3)
         _G.TDAutoFarmRunning = true
-        
-        if _G.TDAutoFarmScript then
-            loadstring(_G.TDAutoFarmScript)()
-        end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HopsDev0/lua/refs/heads/main/main.lua"))()
     ]])
 end
 
