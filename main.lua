@@ -53,9 +53,9 @@ local ReplaySequence = {
     {delay = 22.022, action = "upgrade", customID = 6},
 
     -- Zenith
-    {delay = 18.567, action = "place", tower = "Zenith", customID = 7, pos = Vector3.new(-2.500494, 0.050001, 4.450508)},
-    {delay = 16.965, action = "place", tower = "Zenith", customID = 8, pos = Vector3.new(0.089555, 0.050000, 4.274220)},
-    {delay = 12.919, action = "place", tower = "Zenith", customID = 9, pos = Vector3.new(2.827975, 0.050000, 4.284657)},
+    {delay = 18.567, action = "place", tower = "RetroZenith", customID = 7, pos = Vector3.new(-2.500494, 0.050001, 4.450508)},
+    {delay = 16.965, action = "place", tower = "RetroZenith", customID = 8, pos = Vector3.new(0.089555, 0.050000, 4.274220)},
+    {delay = 12.919, action = "place", tower = "RetroZenith", customID = 9, pos = Vector3.new(2.827975, 0.050000, 4.284657)},
 
     -- Juggernaut
     {delay = 10.525, action = "place", tower = "Juggernaut", customID = 10, pos = Vector3.new(-7.982096, 0.050000, 7.491612)},
@@ -90,7 +90,7 @@ local ReplaySequence = {
     {delay = 3.507, action = "upgrade", customID = 9},
 
     -- Zenith #4
-    {delay = 3.552, action = "place", tower = "Zenith", customID = 12, pos = Vector3.new(3.809556, 0.049999, 6.843139)},
+    {delay = 3.552, action = "place", tower = "RetroZenith", customID = 12, pos = Vector3.new(3.809556, 0.049999, 6.843139)},
     {delay = 0.463, action = "upgrade", customID = 12},
     {delay = 0.464, action = "upgrade", customID = 12},
     {delay = 6.670, action = "upgrade", customID = 12},
@@ -183,7 +183,7 @@ local TowerIndexMap = {}
 local TowerUUIDs = {
     ["1x1x1x1"] = "2a1dfa30-2a63-4e2b-949f-b665dc7db23c",
     ["King"] = "2ba067b0-abd2-4c4f-99c6-49bd57a1a4a2",
-    ["Zenith"] = "eeadfe24-11b2-406f-bfe5-9e055028a1c5",
+    ["RetroZenith"] = "2ca3d679-3bce-4bf7-a0bc-072d1b02b5b3",
     ["Juggernaut"] = "3415d1d7-bea1-4d23-8f26-d3018bce6f80",
     ["Musician"] = "a0e4e5f8-9e08-40c9-b3d9-d814ae1cacf4"
 }
