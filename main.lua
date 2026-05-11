@@ -54,7 +54,7 @@ local ReplaySequence = {
 
     -- Zenith
     {delay = 18.567, action = "place", tower = "Zenith", customID = 7, pos = Vector3.new(-2.500494, 0.050001, 4.450508)},
-    {delay = 14.965, action = "place", tower = "Zenith", customID = 8, pos = Vector3.new(0.089555, 0.050000, 4.274220)},
+    {delay = 16.965, action = "place", tower = "Zenith", customID = 8, pos = Vector3.new(0.089555, 0.050000, 4.274220)},
     {delay = 12.919, action = "place", tower = "Zenith", customID = 9, pos = Vector3.new(2.827975, 0.050000, 4.284657)},
 
     -- Juggernaut
