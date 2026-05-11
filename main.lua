@@ -74,7 +74,7 @@ local ReplaySequence = {
     {delay = 5.464, action = "upgrade", customID = 6},
 
     -- Second King
-    {delay = 8.708, action = "place", tower = "King", customID = 11, pos = Vector3.new(-3.841302, 0.049999, 2.271905)},
+    {delay = 9.708, action = "place", tower = "King", customID = 11, pos = Vector3.new(-3.841302, 0.049999, 2.271905)},
     {delay = 1.259, action = "upgrade", customID = 11},
     {delay = 1.864, action = "upgrade", customID = 11},
 
