@@ -50,7 +50,7 @@ local ReplaySequence = {
 
     -- King
     {delay = 3.087, action = "place", tower = "King", customID = 6, pos = Vector3.new(-7.784741, 0.050000, 4.796396)},
-    {delay = 22.022, action = "upgrade", customID = 6},
+    {delay = 25.022, action = "upgrade", customID = 6},
 
     -- Zenith
     {delay = 18.567, action = "place", tower = "RetroZenith", customID = 7, pos = Vector3.new(-2.500494, 0.050001, 4.450508)},
