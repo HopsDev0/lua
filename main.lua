@@ -247,31 +247,33 @@ local function executeAction(step)
         print("🔄 Replay triggered")
 
     elseif step.action == "place" then
-        local instance = getPlacementInstance()
-        if not instance then
-            warn("❌ No placement instance")
-            return false
-        end
+    local instance = getPlacementInstance()
+    if not instance then
+        warn("❌ No placement instance")
+        return false
+    end
 
-        local args = {
+    local args = {
+        {
             towerID = TowerUUIDs[step.tower],
             towerToPlace = step.tower,
             instance = instance,
-            position = step.pos
+            position = vector.create(step.pos.X, step.pos.Y, step.pos.Z)
         }
+    }
 
-        local success, result = pcall(function()
-            return Functions.PlaceTower:InvokeServer(args)
-        end)
+    local success, result = pcall(function()
+        return Functions.PlaceTower:InvokeServer(unpack(args))
+    end)
 
-        if success and result then
-            PlacementCounter = PlacementCounter + 1
-            TowerIndexMap[step.customID] = tostring(PlacementCounter)
-            print(string.format("✅ [%d] %s -> #%d", ActionCounter, step.tower, PlacementCounter))
-        else
-            warn("❌ Place failed:", step.tower)
-            return false
-        end
+    if success and result then
+        PlacementCounter = PlacementCounter + 1
+        TowerIndexMap[step.customID] = tostring(PlacementCounter)
+        print(string.format("✅ [%d] %s -> #%d", ActionCounter, step.tower, PlacementCounter))
+    else
+        warn("❌ Place failed:", step.tower)
+        return false
+    end
 
     elseif step.action == "upgrade" then
         local index = TowerIndexMap[step.customID]
