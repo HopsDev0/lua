@@ -253,17 +253,13 @@ local function executeAction(step)
         return false
     end
 
-    local args = {
-        {
+    local success, result = pcall(function()
+        return Functions.PlaceTower:InvokeServer({
             towerID = TowerUUIDs[step.tower],
             towerToPlace = step.tower,
             instance = instance,
             position = vector.create(step.pos.X, step.pos.Y, step.pos.Z)
-        }
-    }
-
-    local success, result = pcall(function()
-        return Functions.PlaceTower:InvokeServer(unpack(args))
+        })
     end)
 
     if success and result then
@@ -271,7 +267,7 @@ local function executeAction(step)
         TowerIndexMap[step.customID] = tostring(PlacementCounter)
         print(string.format("✅ [%d] %s -> #%d", ActionCounter, step.tower, PlacementCounter))
     else
-        warn("❌ Place failed:", step.tower)
+        warn("❌ Place failed:", step.tower, result)
         return false
     end
 
