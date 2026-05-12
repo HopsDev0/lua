@@ -147,7 +147,7 @@ local ReplaySequence = {
 local Config = {
     AutoStartOnRejoin = true,
     DelayAfterRejoin = 5,
-    LoopDelay = 14,
+    LoopDelay = 15,
 }
 
 -- ═══════════════════════════════════════════════════════════
@@ -262,12 +262,14 @@ local function executeAction(step)
         })
     end)
 
-    if success and result then
+    print("DEBUG - success:", success, "result:", result, "type:", type(result))
+
+    if success and result and result ~= false then
         PlacementCounter = PlacementCounter + 1
         TowerIndexMap[step.customID] = tostring(PlacementCounter)
         print(string.format("✅ [%d] %s -> #%d", ActionCounter, step.tower, PlacementCounter))
     else
-        warn("❌ Place failed:", step.tower, result)
+        warn("❌ Place WIRKLICH failed:", step.tower, "result =", result)
         return false
     end
 
