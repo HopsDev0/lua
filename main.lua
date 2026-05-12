@@ -147,7 +147,7 @@ local ReplaySequence = {
 local Config = {
     AutoStartOnRejoin = true,
     DelayAfterRejoin = 5,
-    LoopDelay = 15,
+    LoopDelay = 14,
 }
 
 -- ═══════════════════════════════════════════════════════════
